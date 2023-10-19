@@ -15,7 +15,7 @@ def welcome():
 
 @app.route("/sucess/<int:score>")
 def success(score):
-    return "The person has passed and the marks is " + str(score)
+    return "<html><body><h1>The person has passed and the marks is</h1></body></html>" + str(score)
 
 
 @app.route("/fail/<int:score>")
