@@ -38,6 +38,11 @@ def results(marks):
 
     return redirect(url_for(result, score=marks))
 
+# Result checker
+# @app.route("/submit",methods = ['POST','GET'])
+
+# def submit():
+
 
 if __name__ == "__main__":
     app.run(debug=True)
