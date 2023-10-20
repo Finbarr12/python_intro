@@ -1,5 +1,12 @@
 # Integrate HTML with flask
 # HTTP GET AND POST
+# jinja template
+# ...
+# {%....%} for statements
+# {{}} to print output
+# {#...#} this is for comments
+# ...
+
 
 from flask import Flask, redirect, url_for, render_template, request
 
