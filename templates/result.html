@@ -6,12 +6,18 @@
     <title>Document</title>
   </head>
   <body>
-    <table>
+    <table b>
    {% for key,value in result.items()%}
    <tr>
     <th>
         {{ key }}
-        <th>{{ value }}</th>
+        <th>
+            {% if value == "pass" %}
+            <h1 style="color: green;">{{ value }}</h1>
+            {% else %}
+             <h1 style="color: red;">{{ value }}</h1>
+        </th>
+        {% endif %}
     </th>
    </tr>
     {% endfor %}
