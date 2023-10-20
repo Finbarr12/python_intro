@@ -1,0 +1,19 @@
+.inp {
+  width: 97%;
+  height: 25px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-bottom: 20px;
+}
+.sub {
+  width: 98.3%;
+  height: 35px;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: green;
+  border-radius: 5px;
+  cursor: pointer;
+}
