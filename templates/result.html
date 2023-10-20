@@ -6,10 +6,15 @@
     <title>Document</title>
   </head>
   <body>
-    {% if result>=50 %}
-    <h1>Your result is passed with {{result}} points</h1>
-    {% else %}
-    <h1>Your result is failed {{result}} points</h1>
-    {% endif %}
+    <table>
+   {% for key,value in result.items()%}
+   <tr>
+    <th>
+        {{ key }}
+        <th>{{ value }}</th>
+    </th>
+   </tr>
+    {% endfor %}
+   </table>
   </body>
 </html>
