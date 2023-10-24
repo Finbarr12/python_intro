@@ -1,39 +1,43 @@
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template
 
 app = Flask(__name__)
+
+JOBS = [
+    {
+        "id": 1,
+        "title": "Data Analyst",
+        "location": "Bangalru,India",
+        "salary": "#250,000,00"
+    },
+    {
+        "id": 2,
+        "title": "Data Scietist",
+        "location": "Delhi,India",
+        "salary": "#150,000,00"
+    },
+    {
+        "id": 3,
+        "title": "Frontend Engineering",
+        "location": "Remote",
+        "salary": "#200,000,00"
+    },
+    {
+        "id": 4,
+        "title": "Backend Engineering",
+        "location": "Lagos,Nigeria",
+        "salary": "#250,000,00"
+    },
+]
 
 
 @app.route("/")
 def home():
-    return "hello worldgdggdsss"
+    return render_template("home.html", jobs=JOBS)
 
 
 @app.route("/members")
 def welcome():
     return "hello members"
-
-
-@app.route("/sucess/<int:score>")
-def success(score):
-    return "<html><body><h1>The person has passed and the marks is</h1></body></html>" + str(score)
-
-
-@app.route("/fail/<int:score>")
-def failure(score):
-    return "The person has failed and the marks is " + str(score)
-
-# result checker
-
-
-@app.route("/result/<int:marks>")
-def results(marks):
-    result = ''
-    if marks < 50:
-        result = "failure"
-    else:
-        result = "success"
-
-    return redirect(url_for(result, score=marks))
 
 
 if __name__ == "__main__":

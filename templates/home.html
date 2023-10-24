@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% for job in jobs %}
+
+    <div
+      style="
+        display: flex;
+        width: 400px;
+        min-height: 40px;
+        /* background-color: red; */
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <div>
+        <h3>{{job['title']}}</h3>
+        <p>{{job['location']}}</p>
+      </div>
+      <button style="height: 30px">Apply</button>
+    </div>
+    {% endfor %}
+  </body>
+</html>
